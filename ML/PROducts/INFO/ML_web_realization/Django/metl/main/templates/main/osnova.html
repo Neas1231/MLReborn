@@ -1,0 +1,103 @@
+<!--templates обязательное название папки для html шаблонов -->
+<!--папка приложения(main) нужна для того, чтобы html шаблоны с разных приложений не заменяли друг друга-->
+{% extends "main/shapka.html" %}
+{% load static %}
+{% block title %} METL {% endblock %}
+{% block content %}
+
+
+
+<!--Блок о компании-->
+
+    <div class="background_about_comp">
+        <div class="text_and_image">
+            <div class="about_comp">
+                <div class="background_images_comp">
+                    <img id="#bashni_about_comp" src="/static/media/окомпании_1.png" id="about_comp_back">
+                </div>
+                <div class="text_about_comp" id="about">
+                    <div class="header_text_about_comp">
+                        <h1>О компании</h1>
+                    </div>
+                    <div class="content_about_comp">
+                        <div class="back_blovk_ab">
+                            <div class="block_content_about_comp">
+                                    <h2>Наша компания "Метл" занимается разработкой программных
+                                    продуктов, связанных с недвижимостью. На данном сайте
+                                    Вы можете <span class="highlighting_cont_about_comp">посчитать</span>
+                                    стоимость квадратных метров своего жилья.
+                                </h2>
+                            </div>
+                            <div class="block_content_about_comp">
+                                <h2>
+                                    Для реализации нашего проекта мы использовали <span class="highlighting_cont_about_comp">SQLite</span>
+                                    для удобной работы с БД, фреймворки <span class="highlighting_cont_about_comp">Django</span>
+                                    и <span class="highlighting_cont_about_comp">Bootstrap</span> для эффективной работы с продуктом в дальнейшем.
+                                </h2>
+                            </div>
+                            <div class="block_content_about_comp">
+                                <h2>
+                                    При создании проекта мы придерживаемся принципов Agile и используем
+                                    в работе современные технологии. В проекте реализованы следующие процессы:
+                                    <span class="highlighting_cont_about_comp">-</span> верстка сайта для удобного взаимодействия с пользователем;
+                                    <span class="highlighting_cont_about_comp">-</span> анализ полученных данных с подсчетом и выведением грамотного результата.
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--Калькулятор-->
+<div class="block_calculator" id="calculation">
+            <h3>Калькулятор</h3>
+        <h4>Данные об объекте</h4>
+    <div class="pole_calculator_block">
+                <div class="content_calculator_1">
+                    <form action="" method="post" id = 'all' style="z-index: 9" class="pole_dlyay_vvoda">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                    </form>
+                </div>
+
+                <div class="content_calculator_2">
+
+                </div>
+
+
+    </div>
+    <img src="/static/media/фон_калькулятор.png" id="fon_calculator">
+</div>
+<div class="buttons_clear_rasschitat">
+<!--     <a href="" class="button_clear"></a>-->
+    <img src="/static/media/очистить.png" id="button_clear" onclick="location.reload(); return false;">
+<!--    <input id="button_clear" type="submit" form="clear">-->
+<!--    <img src="/static/media/сохранить.png" id = "button_clear">-->
+
+    <input id="button_rasschitat" type="submit" form="all" name = "submit"/>
+
+</div>
+
+<div class="block_dop_okno" id="open">
+   <div class="fon_dop_okno">
+    <img src="/static/media/dop_okno.png" id="dop_okno">
+       <h4 class="lich_info_text">
+           Личная информация
+       </h4>
+    <img src="/static/media/Ввод_номера.png" id="pole_vvoda">
+    <img src="/static/media/Ввод_номера.png" id="pole_vvoda2">
+       <p class="cont_lich">
+            Нажимая “Посчитать” Вы соглашаетесь с политикой конфидeнциальности компании
+           <a href="https://samolet.ru/agreement/" target="_blank">
+               https://samolet.ru/agreement/
+           </a>
+       </p>
+        <img src="/static/media/сохранить.png" id="button_rasschitat_dop">
+  </div>
+</div>
+
+
+
+{% endblock %}

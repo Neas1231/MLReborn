@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/js/src.js">
+    <link rel="shortcut icon" href="/static/media/лого.png" type="image/png">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+
+<!--Шапка-->
+
+    <div class="header">
+        <div class="header_content">
+            <div class="background_header">
+                <img src="/static/media/fonsh.jpg" id="background_image_header">
+
+            </div>
+            <div class="logo_header">
+                <img src="/static/media/лого.png" id="logo_image_header">
+
+            </div>
+             <div class="button_block">
+
+                <div class="block">
+                    <nav class="scrolltocomp">
+                        <a href="#about">
+                            <div class="button">
+                                <h1>О нас</h1>  
+                            </div>
+                        </a>
+                    </nav>
+                </div>
+
+                <nav class="scrolltocomp">
+                    <a href="#about">
+                        <div class="block_arrow_down">
+                            <div class="arrow">
+                                <hr class="kernel">
+                                <div class="pointer"></div>
+                            </div>
+                        </div>
+                    </a>
+                </nav>
+
+                 <div class="block">
+                    <nav class="scrolltocalc">
+                        <a href="#calculation">
+                            <div class="button">
+                                <h1> Калькулятор </h1>
+                            </div>
+                        </a>
+                    </nav>
+                </div>
+             </div>
+        </div>
+    </div>
+        {{ data }}
+{% block content %}{% endblock %}
+</body>
+</html>

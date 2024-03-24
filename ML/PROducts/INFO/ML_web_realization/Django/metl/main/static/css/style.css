@@ -1,0 +1,416 @@
+ body {
+     background-color: #f5fffa;
+     max-width: auto;
+     margin: 0 auto;
+     color: black;
+ }
+
+ a {
+    text-decoration: none;
+    color: black;
+ }
+
+
+ p {
+     font-family: 'Optima';
+     font-size: 22px;
+     color: #797979;
+ }
+
+ h1 {
+     font-family: monospace;
+     font-weight: bold;
+     font-size: 35px;
+ }
+
+ h2 {
+     font-family: 'Comic Sans MS';
+     font-size: 22px;
+ }
+
+ h3 {
+     font-family: monospace;
+     font-weight: bold;
+     font-size: 100px;
+ }
+
+  h4 {
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+
+
+ /* Шапка */
+
+ .header {
+     width: auto;
+     background-color: white;
+     height: 760px;
+ }
+
+ .header_content {
+     width: 100%;
+     margin: 0 auto;
+ }
+
+ #background_image_header {
+     height: 760px;
+     width: 100%;
+     position: absolute;
+ }
+
+ #logo_image_header {
+     margin-top: 70px;
+     height: 285px;
+     width: 259px;
+     position: relative;
+ }
+
+ .logo_header {
+     display: flex;
+     justify-content: center;
+ }
+
+ /* Стрелка */
+
+ .block_arrow_down {
+     width: 80px;
+     height: 80px;
+     background-color: #21d921;
+     opacity: .5;
+     border-radius: 50%;
+     cursor: pointer;
+ }
+
+ .arrow {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 77px;
+ }
+
+ .kernel {
+     border: 2px solid black;
+     width: 32px;
+     transform: rotate(90deg);
+ }
+
+ .pointer {
+     width: 20px;
+     height: 20px;
+     border-bottom: 4px solid black;
+     border-right: 4px solid black;
+     transform: rotate(45deg);
+     margin: -17px 0 0 28px;
+ }
+
+ /* Блок навигации с кнопками */
+
+ .button_block {
+     display: flex;
+     height: 350px;
+     align-items: flex-end;
+     width: 1200px;
+     margin: 0 auto;
+     justify-content: space-around;
+ }
+
+
+ .block {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     cursor: pointer;
+
+ }
+
+ .text {
+     position: absolute;
+ }
+
+ /* .text_calc {
+
+
+} */
+
+
+ .button {
+     width: 316px;
+     height: 80px;
+     background-color: #21d921;
+     border-radius: 36px;
+     opacity: .5;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     cursor: pointer;
+ }
+
+ .button h1 {
+     color: black;
+ }
+
+
+ /* О нашей компании */
+
+ .background_about_comp {
+     color: white;
+     width: auto;
+ }
+
+ .about_comp {
+     color: black;
+     display: flex;
+     flex-direction: row-reverse;
+     align-items: flex-end;
+     justify-content: center;
+ }
+
+ .text_about_comp {
+     width: 1200px;
+     color: black;
+ }
+
+ .header_text_about_comp h1 {
+     font-size: 120px;
+     padding-left: 525px;
+ }
+
+ .content_about_comp {
+     margin-top: 60px;
+     width: 500px;
+ }
+
+ .content_about_comp h2 {
+     margin: 10px auto;
+     text-align: right;
+     padding: 30px 30px;
+     width: 885px;
+ }
+
+ .block_content_about_comp {
+     background-color: black;
+     margin: 0 -50vw;
+     margin-top: 150px;
+     padding-left: 200px;
+     color: white;
+ }
+
+ .block_content_about_comp:last-child {
+     margin-bottom: -30px;
+ }
+
+ .back_blovk_ab {
+     width: 1200px;
+     margin-left: 200px;
+ }
+
+ .highlighting_cont_about_comp {
+     font-size: 25px;
+     color: #21d921;
+ }
+
+ #bashni_about_comp {
+     width: 701px;
+     height: 1390px;
+     position: absolute;
+
+ }
+
+ .text_and_image {
+     display: flex;
+     justify-content: center;
+ }
+
+ /* Калькулятор */
+
+ .block_calculator {
+     width: 1200px;
+     margin: 144px auto;
+     display: flex;
+     align-items: stretch;
+     flex-direction: row;
+     justify-content: center;
+ }
+
+ .block_calculator h3 {
+     margin-top: -75px;
+ }
+
+ #fon_calculator {
+     width: 1000px;
+     height: 1400px;
+     position: absolute;
+ }
+
+ #pole_dlyay_vvoda {
+     width: 300px;
+     height: 60px;
+ }
+
+ .block_upper_calc {
+     margin-left: 140px;
+     display: flex;
+     position: absolute;
+     margin-top: 0px;
+ }
+
+ .content_calculator_1 {
+     flex-direction: column;
+     display: flex;
+     height: 600px;
+     width: 400px;
+     margin-left: -25px;
+ }
+
+ .content_calculator_1 input {
+    width: 250px;
+    height: 35px;
+    border-radius: 50px;
+    background-color: #D9D9D9;
+    padding: 5px 30px;
+}
+
+.content_calculator_1 form {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+
+ .content_calculator_2 {
+     flex-direction: column;
+     display: flex;
+     height: 600px;
+     width: 400px;
+ }
+
+ .background_calculator {
+     display: flex;
+     flex-wrap: wrap;
+ }
+
+ .pole_calculator_block {
+    margin-top: 250px;
+     position: absolute;
+     display: flex;
+ }
+
+ .pole_calculator_block p {
+    color: #C0C0C0;
+    z-index: 3;
+    font-size: 30px;
+    margin-left: 400px;
+    width: 700px;
+    justify-content: space-between;
+    display: flex;
+    
+
+ }
+
+ .pole_calculator_block img {
+     margin-left: 70px;
+     z-index: 2;
+     display: flex;
+ }
+
+ .block_calculator h4 {
+    color: #00D100;
+    position: absolute;
+    z-index: 4;
+    margin-top: 170px;
+    margin-left: -257px;
+ }
+
+ #button_clear {
+    display: flex;
+    width: 305px;
+    height: 84px;
+    z-index: 13;
+    text-indent:-9999px;
+	line-height:0;
+	background:url(/static/media/очистить.png);
+	border-radius: 44px;
+ }
+
+ input#button_rasschitat {
+    padding-left: 150px;
+    margin-left: 106px;
+    display: flex;
+    width: 305px;
+    height: 84px;
+    z-index: 6;
+    text-indent:-9999px;
+	line-height:0;
+	background:url(/static/media/сохранить.png);
+	border-radius: 44px;
+ }
+
+ .buttons_clear_rasschitat {
+    display: flex;
+    flex-direction: row;
+    width: 750px;
+    height: auto;
+    margin: 1000px auto auto auto;
+ }
+
+
+
+/*выплывающие окно*/
+.fon_dop_okno{
+    margin: auto auto auto auto;
+    height: 750px;
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#dop_okno{
+    display: flex;
+    height: 750px;
+    width: 1000px;
+}
+
+.block_dop_okno{
+    display: none;
+}
+
+#pole_vvoda {
+    position: absolute;
+    margin-top: 200px;
+}
+
+#pole_vvoda2 {
+    position: absolute;
+    margin-top: 350px;
+}
+
+#button_rasschitat_dop{
+    margin: -130px auto auto auto;
+    display: flex;
+    width: 300px;
+    height: 80px;
+    z-index: 7;
+}
+
+.lich_info_text {
+    position: absolute;
+}
+
+.cont_lich {
+    position: absolute;
+    text-align: center;
+    width: 600px;
+    margin-top: 450px;
+    color: black;
+}
+.cont_lich a:hover {
+    color: white;
+}
+
+.forma{
+    z-index: 6;
+}

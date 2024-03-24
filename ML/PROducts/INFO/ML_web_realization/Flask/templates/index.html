@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="static/css/style.css">
+    <meta charset="UTF-8">
+    <title>ML</title>
+</head>
+
+<body>
+<div>
+ <h1 align="center"> Predict diabetic </h1>
+ <form action="{{ url_for('predict') }}" method = "post" id="ml">
+     <div align="center">
+     <label>Gender:</label>
+     <input type="radio" name="gender" value="1" required="required" id="gender_male" class="inp"/>
+     <label for="gender_male">Male</label>
+     <input type="radio" name="gender" value="0" required="required" id="gender_female" class="inp"/>
+     <label for="gender_female">Female</label>
+     </div>
+     <br>
+     <div align="center">
+
+     <label for="age">Age:</label>
+     <input type="text" name="age" required="required" id="age" class="inp"/>
+
+     </div>
+     <br>
+     <div align="center">
+     <label>Hypertension:</label>
+     <input type="radio" name="hyper" value="1" required="required" id="hyper_yes" class="inp"/>
+     <label>Yes</label>
+     <input type="radio" name="hyper" value="0" required="required" id="hyper_no" class="inp"/>
+     <label>No</label>
+
+     </div>
+
+     <br>
+
+     <div align="center">
+     <label>Heart disease:</label>
+     <input type="radio" name="heart" value="1" required="required" id="heart_yes" class="inp"/>
+     <label>Yes</label>
+     <input type="radio" name="heart" value="0" required="required" id="heart_no" class="inp"/>
+     <label>No</label>
+     </div>
+
+     <br>
+
+     <div align="center">
+     <label>Smoking history:</label>
+     <input type="radio" name="smk" value="3" required="required" id="smk_yes" class="inp"/>
+     <label>Never</label>
+     <input type="radio" name="smk" value="1" required="required" id="smk_no" class="inp"/>
+     <label>Ever</label>
+     <input type="radio" name="smk" value="0" required="required" id="smk_yes" class="inp"/>
+     <label>Current</label>
+     <input type="radio" name="smk" value="5" required="required" id="smk_no" class="inp"/>
+     <label>Not current</label>
+     <input type="radio" name="smk" value="2" required="required" id="smk_no" class="inp"/>
+     <label>Former</label>
+     <input type="radio" name="smk" value="4" required="required" id="smk_no" class="inp"/>
+     <label>No info</label>
+     </div>
+
+     <div align="center">
+
+     <label>BMI:</label>
+     <input type="text" name="bmi" required="required" id="bmi" class="tehstbl"/>
+     <br>
+     <label>HbA1c_level:</label>
+     <input type="text" name="HbA1c" required="required" id="hb" class="tehstbl"/>
+     <br>
+     <label>Blood glucose level:</label>
+     <input type="text" name="glucose" required="required" id="glucose" class="tehstbl"/>
+     <br>
+     </div>
+
+
+
+
+
+
+ </form>
+    <form action="/" method="POST" id="ers">
+    </form>
+    <div align="center" class="subm" >
+     <button type="submit" class="btn" form="ml">Predict</button>
+
+
+
+         <button type="submit" class="btn" style="margin: 10px;" form="ers">Erase</button>
+
+
+    </div>
+
+
+
+
+<br>
+<br>
+    <div align="center"><h1>{{ prediction_text }} </h1></div>
+    <div align="center">{{ final_features }}</div>
+</div>
+
+
+
+
+
+</body>
+
+</html>

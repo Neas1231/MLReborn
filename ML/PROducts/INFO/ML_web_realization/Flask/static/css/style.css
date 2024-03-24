@@ -1,0 +1,14 @@
+.subm{
+    margin-top: 10px;
+    display: list-item;
+    align-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.tehstbl{
+    margin-top:15px
+}
+#ers{
+    display: flex;
+    justify-content: center;
+}
