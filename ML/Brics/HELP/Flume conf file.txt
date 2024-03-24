@@ -1,0 +1,28 @@
+# agent name
+agent.sources = source1
+agent.sinks = sink1
+agent.channels = channel1
+# Spooling Directory
+# set source1
+agent.sources.source1.type = spooldir
+agent.sources.source1.spoolDir = /home/hadoop/tmpfile/logdfs # путь к файлам
+agent.sources.source1.channels = channel1
+agent.sources.source1.fileHeader = false
+agent.sources.source1.interceptors = i1
+agent.sources.source1.interceptors.i1.type = timestamp
+agent.sources.source1.deletePolicy = immediate
+# set sink1
+agent.sinks.sink1.type = hdfs
+agent.sinks.sink1.hdfs.path = /input
+agent.sinks.sink1.hdfs.fileType = DataStream
+agent.sinks.sink1.hdfs.writeFormat = TEXT
+agent.sinks.sink1.hdfs.rollInterval = 1
+agent.sinks.sink1.channel = channel1
+agent.sinks.sink1.hdfs.filePrefix = %Y-%m-%d
+# set channel1
+agent.channels.channel1.type = file
+agent.channels.channel1.checkpoinDir = /home/hadoop/tmpfile/logdfstmp/point # Чекпоинт для пути к файлам(кеш)
+agent.channels.channel1.dataDirs = /home/hadoop/tmpfile/logdfstmp # корневая чекпоинта
+
+# И команда
+flume-ng agent -n agent -c conf -f monitor.conf
