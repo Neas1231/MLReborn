@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>TrudVsem Parser</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -32,8 +32,14 @@
     </item>
     <item>
      <widget class="QLineEdit" name="lineEdit">
-      <property name="text">
+      <property name="toolTipDuration">
+       <number>-1</number>
+      </property>
+      <property name="inputMask">
        <string/>
+      </property>
+      <property name="text">
+       <string>https://trudvsem.ru/vacancy/search</string>
       </property>
      </widget>
     </item>
