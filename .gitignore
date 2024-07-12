@@ -97,3 +97,4 @@ ML/ML_mine/Gan MNIST/test/Generator_epoch_4.pth
 ML/ML_mine/Gan MNIST/test/Generator_epoch_9.pth
 *.pth
 ML/PROducts/CV/Detection_Animals/data
+ML/PROducts/bad words detection/tox/pytorch_model.bin
